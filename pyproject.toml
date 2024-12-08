@@ -1,0 +1,19 @@
+[project]
+name = "nl2sql"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "surrealdb>=0.4.1",
+    "langchain-openai>=0.2.11",
+    "langchain-community>=0.3.10",
+    "langchain>=0.3.10",
+    "pymysql>=1.1.1",
+    "chromadb>=0.5.23",
+    "cryptography>=44.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
