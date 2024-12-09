@@ -29,7 +29,7 @@ if not openai_api_key:
 db_user = os.getenv("DB_USER", "app_user")
 db_password = os.getenv("DB_PASSWORD")
 db_host = os.getenv("DB_HOST", "localhost")
-db_name = os.getenv("DB_NAME", "your_database")
+db_name = os.getenv("DB_NAME", "employees")
 
 if not db_password:
     logger.error("Database password is not set in environment variables.")
@@ -74,7 +74,7 @@ def generate_sql_query(question: str):
     logger.info(f"Generated SQL Query: {query}")
     return query
 
-query = generate_sql_query("What is Alice's email address?")
+query = generate_sql_query("What is longest serving employee's name?")
 
 # Execute the query using a session
 def execute_query(query):
