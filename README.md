@@ -22,3 +22,12 @@ CREATE TABLE orders (
     FOREIGN KEY (customer_id) REFERENCES customers(id)
 );
 ```
+
+```INSERT INTO customers (name, email) VALUES
+('Alice', 'alice@example.com'),
+('Bob', 'bob@example.com');
+
+INSERT INTO orders (customer_id, amount) VALUES
+(1, 99.99),
+(2, 149.49);
+```
