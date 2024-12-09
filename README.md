@@ -31,8 +31,6 @@
     INSERT INTO orders (customer_id, amount) VALUES
     (1, 99.99),
     (2, 149.49);
-    ```
-    
-          FOREIGN KEY (customer_id) REFERENCES customers(id)
+    FOREIGN KEY (customer_id) REFERENCES customers(id)
       );
 
