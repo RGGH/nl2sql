@@ -2,9 +2,9 @@ import os
 import logging
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
-from langchain_community.utilities.sql_database import SQLDatabase
-from langchain.chains import create_sql_query_chain
-from langchain_openai import ChatOpenAI  # type: ignore
+from langchain_community.utilities.sql_database import SQLDatabase 
+from langchain.chains import create_sql_query_chain 
+from langchain_openai import ChatOpenAI 
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from dotenv import load_dotenv
@@ -13,7 +13,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Logging setup
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.SELECT e.first_name, e.last_name
+FROM employees e
+ORDER BY e.hire_date ASC
+LIMIT 2, 1;INFO)
 logger = logging.getLogger(__name__)
 
 # OpenAI API key
@@ -89,7 +92,7 @@ def rephrase_result(question: str, query: str, result: list):
 
 # Main workflow
 if __name__ == "__main__":
-    question = "What is the name of the 2nd longest serving employee?"
+    question = "What is the name of the 3rd longest serving employee?"
     logger.info(f"User Question: {question}")
 
     # Generate and execute the query
