@@ -1,5 +1,5 @@
-``sudo apt update
-  sudo apt install mysql-server```
+```sudo apt update```
+```sudo apt install mysql-server```
 
 ```sudo systemctl start mysql```
 
@@ -7,6 +7,7 @@
 
 ```CREATE DATABASE your_database;```
 
+<<<<<<< HEAD
 ```CREATE TABLE customers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -31,3 +32,20 @@ INSERT INTO orders (customer_id, amount) VALUES
 (1, 99.99),
 (2, 149.49);
 ```
+=======
+  ```
+  CREATE TABLE customers (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      name VARCHAR(255) NOT NULL,
+      email VARCHAR(255) UNIQUE NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+  
+  CREATE TABLE orders (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      customer_id INT NOT NULL,
+      amount DECIMAL(10, 2) NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (customer_id) REFERENCES customers(id)
+  );```
+>>>>>>> df8757c0848f23b648ea0a83371608e6243f75b9
