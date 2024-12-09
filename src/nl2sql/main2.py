@@ -29,7 +29,7 @@ if not openai_api_key:
 db_user = os.getenv("DB_USER", "app_user")
 db_password = os.getenv("DB_PASSWORD")
 db_host = os.getenv("DB_HOST", "localhost")
-db_name = os.getenv("DB_NAME", "testdb")
+db_name = os.getenv("DB_NAME", "your_database")
 
 if not db_password:
     logger.error("Database password is not set in environment variables.")
